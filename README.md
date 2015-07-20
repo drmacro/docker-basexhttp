@@ -5,8 +5,9 @@ This repository contains **Dockerfile** of [BaseX](http://basex.org/) for [Docke
 ### Installation
 
 1. Install [Docker](https://www.docker.com/).
-2. Clone this repository by running `git clone git@github.com:dirkk/docker-basexhttp.git`
-3. Build the docker image `docker build -t basexhttp .`
+2. Simplest is to download our [automated build](https://registry.hub.docker.com/u/dirkk/docker-basexhttp/) by running `git pull dirkk/docker-basexhttp`
+
+Otherwise, you could clone this repository by running `git clone git@github.com:dirkk/docker-basexhttp.git` and build the docker image `docker build -t basexhttp .`
 
 ### Usage
 
