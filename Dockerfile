@@ -4,8 +4,8 @@ MAINTAINER Dirk Kirsten, <dk@basex.org>
 
 # Download latest BaseX release
 RUN apt-get install curl unzip
-RUN curl http://files.basex.org/releases/BaseX-latest.zip -o /tmp/BaseX-latest.zip
-RUN unzip /tmp/BaseX-latest.zip -d /opt/
+RUN curl http://files.basex.org/releases/8.2.3/BaseX823.zip -o /tmp/BaseX.zip
+RUN unzip /tmp/BaseX.zip -d /opt/
 RUN mkdir /data /repo /webapp
 
 # Define mountable directories.
