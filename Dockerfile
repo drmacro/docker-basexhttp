@@ -3,21 +3,26 @@ FROM java:8
 MAINTAINER Dirk Kirsten, <dk@basex.org>, Michael Seiferle, <ms@basex.org>
 
 # Download latest BaseX release
-RUN apt-get install curl unzip
-RUN curl http://files.basex.org/releases/8.3/BaseX83.zip -o /tmp/BaseX.zip
-RUN unzip /tmp/BaseX.zip -d /opt/
-RUN mkdir /data /repo /webapp
+ADD http://files.basex.org/releases/8.3/BaseX83.zip /tmp/BaseX.zip
+
+RUN apt-get install unzip && \
+  unzip /tmp/BaseX.zip -d /opt/ && \
+  rm /tmp/BaseX.zip && \
+  mv /opt/basex/data / && \
+  mv /opt/basex/repo / && \
+    mv /opt/basex/webapp / 
+# Define working directory.
+WORKDIR /opt/basex
+COPY .basex /opt/basex/.basex
+
 
 # Define mountable directories.
 VOLUME ["/data", "/repo", "/webapp"]
 
-# Define working directory.
-WORKDIR /opt/basex
-COPY .basex /opt/basex/.basex
 
 # Expose port.
 EXPOSE 8984
 EXPOSE 1984
 
 # Define default command.
-ENTRYPOINT ["/opt/basex/bin/basexhttp"]
+ENTRYPOINT ["/opt/basex/bin/basexhttp", "-d"]
