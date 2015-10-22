@@ -1,6 +1,6 @@
 # VERSION 0.1
 FROM java:8
-MAINTAINER Dirk Kirsten, <dk@basex.org>
+MAINTAINER Dirk Kirsten, <dk@basex.org>, Michael Seiferle, <ms@basex.org>
 
 # Download latest BaseX release
 RUN apt-get install curl unzip

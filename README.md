@@ -5,7 +5,7 @@ This repository contains **Dockerfile** of [BaseX](http://basex.org/) for [Docke
 ## Installation
 
 1. Install [Docker](https://www.docker.com/).
-2. Simplest is to download our [automated build](https://registry.hub.docker.com/u/micheee/basexhttp/) by running `docker pull micheee/basexhttp`
+2. Simplest is to download our [automated build](https://hub.docker.com/r/basex/docker-basexhttp/) by running `docker pull basex/basexhttp`
 
 Otherwise, you could clone this repository by running `git clone git@github.com:dirkk/docker-basexhttp.git` and build the docker image `docker build -t basexhttp .`
 
@@ -30,4 +30,4 @@ Open `http://localhost` in your browser to see your RESTXQ page.
 
 We do use tagged automated builds, so you can download a different docker build at our [build page](https://registry.hub.docker.com/u/dirkk/basexhttp/builds_history/261655/). For example, to use BaseX 8.2 you can issue
 
-    docker pull micheee/basexhttp:8.2
+    docker pull basex/basexhttp:8.2
