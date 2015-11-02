@@ -3,7 +3,7 @@ FROM java:8
 MAINTAINER Dirk Kirsten, <dk@basex.org>, Michael Seiferle, <ms@basex.org>
 
 # Download latest BaseX release
-ADD http://files.basex.org/releases/8.3/BaseX83.zip /tmp/BaseX.zip
+ADD http://files.basex.org/releases/8.3.1/BaseX831.zip /tmp/BaseX.zip
 
 RUN apt-get install unzip && \
   unzip /tmp/BaseX.zip -d /opt/ && \
