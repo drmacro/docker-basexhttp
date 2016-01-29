@@ -24,5 +24,8 @@ VOLUME ["/data", "/repo", "/webapp"]
 EXPOSE 8984
 EXPOSE 1984
 
+ENV HOME /opt/basex
+ENV PATH $HOME/bin:$PATH
+
 # Define default command.
 ENTRYPOINT ["/opt/basex/bin/basexhttp", "-d"]
